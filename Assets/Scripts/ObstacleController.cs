@@ -8,7 +8,7 @@ public class ObstacleController : MonoBehaviour
     public GameObject obstacleBody;
 
     // private GameObject cloneExplosive;
-    float enemySpeed = -3;
+    float enemySpeed = 2;
     private float timeLeft;
     private float velocityEnemy;
     private float playerPosx;
@@ -31,14 +31,11 @@ public class ObstacleController : MonoBehaviour
             Destroy(gameObject);
 
         }
+        transform.position = transform.position + -transform.right * Time.deltaTime * enemySpeed;
+
 
     }
 
-    private void FixedUpdate()
-    {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(enemySpeed, 0);
-
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
