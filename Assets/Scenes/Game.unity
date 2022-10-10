@@ -287,6 +287,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 8461057442737868081, guid: 5ea63bf2f20bbbe43b56edf6a19d8a0a, type: 3}
   snakePrefab: {fileID: 2698132178557220745, guid: 6c67ffa06381ab343a5c22294f328e98, type: 3}
+--- !u!114 &1250403931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250403925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889f161d27ff2e248b5d4dbafe6c8d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 7896018952283963816, guid: 27c2f7b143c6ca84f81e53f5e17db179, type: 3}
 --- !u!1 &1662391679
 GameObject:
   m_ObjectHideFlags: 0
