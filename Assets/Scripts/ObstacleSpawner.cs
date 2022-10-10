@@ -47,7 +47,9 @@ public class ObstacleSpawner : MonoBehaviour
         MapGen mapgener = GetComponent<MapGen>();
         int ChunkToRemove = Random.Range(18, mapgener.chunks.Count);
         Vector3 newPos = mapgener.chunks[ChunkToRemove].GetComponent<WorldChunk>().topTile.position + new Vector3(0, 0.9f, 0);
-        obstacleClone = Instantiate(obstaclePrefab, newPos, Quaternion.identity);
+
+        obstacleClone = Instantiate(obstaclePrefab, newPos, Quaternion.identity, mapgener.chunks[ChunkToRemove].transform);
+
     }
 
 }

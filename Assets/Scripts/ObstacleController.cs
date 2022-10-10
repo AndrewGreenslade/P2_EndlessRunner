@@ -31,7 +31,7 @@ public class ObstacleController : MonoBehaviour
             Destroy(gameObject);
 
         }
-        transform.position = transform.position + -transform.right * Time.deltaTime * enemySpeed;
+      //  transform.position = transform.position + -transform.right * Time.deltaTime * enemySpeed;
 
 
     }
