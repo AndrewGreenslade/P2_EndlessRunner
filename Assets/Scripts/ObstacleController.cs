@@ -24,16 +24,12 @@ public class ObstacleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Screen.width);
-
         if (gameObject.transform.position.x < -20)
         {
             Destroy(gameObject);
 
         }
       //  transform.position = transform.position + -transform.right * Time.deltaTime * enemySpeed;
-
-
     }
 
 
