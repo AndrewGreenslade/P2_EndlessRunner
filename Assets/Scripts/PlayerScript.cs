@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using TMPro;
+using TMPro;
 
 public class PlayerScript : MonoBehaviour
 {
     private GameObject Player;
     public Rigidbody2D rb;
-   // public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText;
     public int score = 0;
     private int jumpSpeed = 7;
     private float moveSpeed = 3;
@@ -26,7 +26,7 @@ public class PlayerScript : MonoBehaviour
         moveLeft();
         moveRight();
         jump();
-        //scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Score: " + score.ToString();
 
     }
 
