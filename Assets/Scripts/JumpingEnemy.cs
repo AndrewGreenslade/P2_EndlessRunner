@@ -33,24 +33,13 @@ public class JumpingEnemy : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
 
-        if (isGrounded)
-        {
-            Debug.Log("Grounded");
-        }
-        else
-        {
-            Debug.Log("Not Grounded");
-        }
-
-        //if (Mathf.Approximately(rb2d.velocity.y, 0))
+        //if (isGrounded)
         //{
         //    Debug.Log("Grounded");
-        //    isGrounded = true;
         //}
         //else
         //{
         //    Debug.Log("Not Grounded");
-        //    isGrounded = false;
         //}
     }
 
@@ -72,7 +61,8 @@ public class JumpingEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Do a thing");
+            Destroy(collision.gameObject);
+            Debug.Log("Player Died");
         }
     }
 }

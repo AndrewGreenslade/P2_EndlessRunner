@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3288230313707414666}
   - component: {fileID: 129063438346990576}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: map generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
