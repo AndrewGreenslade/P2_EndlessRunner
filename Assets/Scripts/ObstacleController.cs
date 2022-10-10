@@ -39,15 +39,10 @@ public class ObstacleController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("collision Enemy with bullet");
-            Destroy(collision.gameObject);
+            collision.GetComponent<PlayerScript>().lives--;
+
             Destroy(gameObject);
         }
-
-
-
-
-
     }
 
 

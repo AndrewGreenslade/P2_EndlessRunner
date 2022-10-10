@@ -61,8 +61,8 @@ public class JumpingEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
-            Debug.Log("Player Died");
+            collision.gameObject.GetComponent<PlayerScript>().lives--;
+            Destroy(gameObject);
         }
     }
 }

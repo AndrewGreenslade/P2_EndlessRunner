@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     private int jumpSpeed = 7;
     private float moveSpeed = 3;
     private bool isJumping = false;
+    public int lives = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,11 @@ public class PlayerScript : MonoBehaviour
         moveLeft();
         moveRight();
         jump();
+
+        if (lives <= 0)
+        {
+            Destroy(gameObject);
+        }
         //scoreText.text = "Score: " + score.ToString();
 
     }
