@@ -6,9 +6,11 @@ public class PlayerScript : MonoBehaviour
 {
     private GameObject Player;
     public Rigidbody2D rb;
+    public int score = 0;
     private int jumpSpeed = 7;
     private float moveSpeed = 3;
     private bool isJumping = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +56,15 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isJumping = false;            
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Coin")
+        {
+            score++;
+            collision.gameObject.SetActive(false);
         }
     }
 }
