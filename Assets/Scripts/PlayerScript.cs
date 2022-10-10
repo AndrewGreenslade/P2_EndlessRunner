@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using TMPro;
 
 public class PlayerScript : MonoBehaviour
 {
     private GameObject Player;
     public Rigidbody2D rb;
+   // public TextMeshProUGUI scoreText;
+    public int score = 0;
     private int jumpSpeed = 7;
     private float moveSpeed = 3;
     private bool isJumping = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,8 @@ public class PlayerScript : MonoBehaviour
         moveLeft();
         moveRight();
         jump();
+        //scoreText.text = "Score: " + score.ToString();
+
     }
 
     public void moveLeft()
@@ -29,7 +35,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-        }     
+        }
     }
 
     public void moveRight()
@@ -53,7 +59,15 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            isJumping = false;            
+            isJumping = false;
+        }
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Coin")
+        {
+            score++;
+            Destroy(collision.gameObject);
         }
     }
 }
