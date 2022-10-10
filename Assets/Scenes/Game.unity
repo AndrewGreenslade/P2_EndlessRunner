@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 8461057442737868081, guid: 5ea63bf2f20bbbe43b56edf6a19d8a0a, type: 3}
+  snakePrefab: {fileID: 2698132178557220745, guid: 6c67ffa06381ab343a5c22294f328e98, type: 3}
 --- !u!1001 &244146133351870983
 PrefabInstance:
   m_ObjectHideFlags: 0
