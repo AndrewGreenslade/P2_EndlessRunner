@@ -34,7 +34,7 @@ public class JumpingEnemy : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
     }
 
-    IEnumerator Jumping()
+    public IEnumerator Jumping()
     {
         while (true)
         {
