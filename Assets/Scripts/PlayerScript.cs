@@ -7,8 +7,7 @@ public class PlayerScript : MonoBehaviour
 {
     private GameObject Player;
     public Rigidbody2D rb;
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI livesText;
+
     public int score = 0;
     private int jumpSpeed = 7;
     private float moveSpeed = 3;
@@ -28,9 +27,9 @@ public class PlayerScript : MonoBehaviour
         moveLeft();
         moveRight();
         jump();
-        
-        scoreText.text = "Score: " + score.ToString();
-        livesText.text = "Lives: " + lives.ToString();
+        GameManager.instance.livesText.text = "Lives: " + lives.ToString();
+        GameManager.instance.scoreText.text = "Score: " + score.ToString();
+
         if (lives <= 0)
         {
             Destroy(gameObject);
@@ -86,6 +85,6 @@ public class PlayerScript : MonoBehaviour
     public void loseLife()
     {
         lives--;
-        livesText.text = "Lives: " + lives.ToString();
+        GameManager.instance.livesText.text = "Lives: " + lives.ToString();
     }
 }

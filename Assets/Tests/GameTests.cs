@@ -6,44 +6,48 @@ using UnityEngine.TestTools;
 
 public class GameTests
 {
-    //private GameObject game;
+    private GameObject game;
 
-    //[SetUp]
-    //public void Setup()
-    //{
-    //    GameObject gameGameObject =
-    //        MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/GenericGame"));
-    //    game = gameGameObject.GetComponent<GameObject>();
-    //}
+    [SetUp]
+    public void Setup()
+    {
+        GameObject gameGameObject =
+            MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Game"));
+        game = gameGameObject.GetComponent<GameObject>();
+        
+    }
 
-    //[TearDown]
-    //public void Teardown()
-    //{
-    //    Object.Destroy(game.gameObject);
-    //}
+    [TearDown]
+    public void Teardown()
+    {
+        Object.Destroy(game.gameObject);
+    }
 
-    // A Test behaves as an ordinary method
-    //[UnityTest]
-    //public IEnumerator JumpChecker()
-    //{
-    //    GameObject enemy = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Evil Snake"));
+    //A Test behaves as an ordinary method
+   [UnityTest]
+    public IEnumerator JumpChecker()
+    {
 
-    //    enemy.transform.position = new Vector3(0,0,0);
+        GameObject enemy = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Evil Snake"));
 
-    //    yield return new WaitForSeconds(1);
+        enemy.transform.position = new Vector3(-5, 0, 0);
 
-    //    Assert.Greater(enemy.transform.position.y, 0);
-    //}
+        enemy.GetComponent<JumpingEnemy>().StartCoroutine(enemy.GetComponent<JumpingEnemy>().Jumping());
 
-    //[UnityTest]
-    //public IEnumerator BoundingBoxChecker()
-    //{
-    //    GameObject player = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Player"));
+        yield return new WaitForSeconds(5);
 
-    //    player.transform.position = new Vector3(0,-7,0);
+        Assert.Greater(enemy.transform.position.y, 0);
+    }
 
-    //    yield return new WaitForSeconds(0.1f);
+    [UnityTest]
+    public IEnumerator BoundingBoxChecker()
+    {
+        GameObject player = GameObject.Find("Player");
 
-    //    Assert.Equals(player.GetComponent<PlayerScript>().lives, 2);
-    //}
+        player.transform.position = new Vector3(0, -5, 0);
+
+        yield return new WaitForSeconds(0.1f);
+
+        Assert.Less(player.GetComponent<PlayerScript>().lives, 3);
+    }
 }
