@@ -71,7 +71,7 @@ public class MapGen : MonoBehaviour
 
     void removeRandomChunk()
     {
-        int ChunkToRemove = Random.Range(18, chunks.Count);
+        int ChunkToRemove = Random.Range(chunks.Count - 5, chunks.Count -1);
 
         if (chunks.Count >= ChunkToRemove)
         {        
