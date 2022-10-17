@@ -9,7 +9,7 @@ public class BoundingBox : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerScript>().resetPosition();
-            collision.gameObject.GetComponent<PlayerScript>().lives--;
+            collision.gameObject.GetComponent<PlayerScript>().loseLife();
         }
     }
 }
