@@ -67,7 +67,7 @@ public class PlayerScript : MonoBehaviour
         deviceID = uniqueID();
         BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfdbsO2vKysmX5H7sdABY5K6j155kXHvC_E2SpmcHrQ8XzJpA/viewform?usp=pp_url&entry.51372667=" + deviceID + "&entry.1637826786=" + timesDied + "&entry.1578808278=" + highScore + " &entry.2039373689=" + distTraveled;
 
-        scoreText.text = "Score: " + score.ToString();
+        //scoreText.text = "Score: " + score.ToString();
         if (lives <= 0)
 
         {
