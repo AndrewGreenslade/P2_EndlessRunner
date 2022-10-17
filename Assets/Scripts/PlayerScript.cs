@@ -30,7 +30,6 @@ public class PlayerScript : MonoBehaviour
         
         scoreText.text = "Score: " + score.ToString();
         if (lives <= 0)
-
         {
             Destroy(gameObject);
         }
@@ -75,5 +74,10 @@ public class PlayerScript : MonoBehaviour
             score++;
             Destroy(collision.gameObject);
         }
+    }
+
+    public void resetPosition()
+    {
+        transform.position = new Vector3(0, 0, 0);
     }
 }
