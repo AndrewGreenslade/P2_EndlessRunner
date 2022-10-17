@@ -32,15 +32,6 @@ public class JumpingEnemy : MonoBehaviour
     void GroundCheck()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
-
-        //if (isGrounded)
-        //{
-        //    Debug.Log("Grounded");
-        //}
-        //else
-        //{
-        //    Debug.Log("Not Grounded");
-        //}
     }
 
     IEnumerator Jumping()
@@ -61,7 +52,7 @@ public class JumpingEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerScript>().lives--;
+            collision.gameObject.GetComponent<PlayerScript>().loseLife();
             Destroy(gameObject);
         }
     }

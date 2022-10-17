@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3288230313707414666}
   - component: {fileID: 129063438346990576}
   - component: {fileID: 1593358268542287338}
+  - component: {fileID: 1691794607}
   m_Layer: 3
   m_Name: map generator
   m_TagString: Untagged
@@ -66,3 +67,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 8461057442737868081, guid: 5ea63bf2f20bbbe43b56edf6a19d8a0a, type: 3}
   snakePrefab: {fileID: 2698132178557220745, guid: 6c67ffa06381ab343a5c22294f328e98, type: 3}
+--- !u!114 &1691794607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2434648272109118305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889f161d27ff2e248b5d4dbafe6c8d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 7896018952283963816, guid: 27c2f7b143c6ca84f81e53f5e17db179, type: 3}
