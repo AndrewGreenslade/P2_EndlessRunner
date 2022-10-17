@@ -24,7 +24,6 @@ public class PlayerScript : MonoBehaviour
 
 
     [SerializeField]
-    private string BASE_URLLL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdbsO2vKysmX5H7sdABY5K6j155kXHvC_E2SpmcHrQ8XzJpA/formResponse";
     private string BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfdbsO2vKysmX5H7sdABY5K6j155kXHvC_E2SpmcHrQ8XzJpA/viewform?usp=pp_url&entry.51372667=";
 
     // Start is called before the first frame update
@@ -35,20 +34,18 @@ public class PlayerScript : MonoBehaviour
         timesDied = "10";
         distTraveled = "6969";
         highScore = "9999999";
+        deviceID = uniqueID();
+
     }
 
 
     IEnumerator Post()//, string email, string phone)
     {
-        //BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfdbsO2vKysmX5H7sdABY5K6j155kXHvC_E2SpmcHrQ8XzJpA/viewform?usp=pp_url&entry.51372667=" + Name;
 
         WWWForm form = new WWWForm();
         //form.AddField("entry.51372667", name);
-
         byte[] rawData = form.data;
         string url = BASE_URL;
-
-
 
         // Post a request to an URL with our custom headers
         WWW www = new WWW(url, rawData);
@@ -65,8 +62,7 @@ public class PlayerScript : MonoBehaviour
         moveLeft();
         moveRight();
         jump();
-        deviceID = uniqueID();
-        BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfdbsO2vKysmX5H7sdABY5K6j155kXHvC_E2SpmcHrQ8XzJpA/viewform?usp=pp_url&entry.51372667=" + deviceID + "&entry.1637826786=" + timesDied + "&entry.1578808278=" + highScore + " &entry.2039373689=" + distTraveled;
+        BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfdbsO2vKysmX5H7sdABY5K6j155kXHvC_E2SpmcHrQ8XzJpA/viewform?usp=pp_url&entry.51372667=" + deviceID + "&entry.1637826786=" + timesDied + "&entry.1578808278=" + score + " &entry.2039373689=" + distTraveled;
 
         scoreText.text = "Score: " + score.ToString();
         if (lives <= 0)
@@ -140,7 +136,7 @@ public class PlayerScript : MonoBehaviour
     
         int z1 = UnityEngine.Random.Range(0, 1000000);
         int z2 = UnityEngine.Random.Range(0, 1000000);
-        string uid =  z1 + ":" + z2;
+        string uid =  z1 + "/" + z2;
         return uid;
     }
 
