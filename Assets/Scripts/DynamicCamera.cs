@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DynamicCamera : MonoBehaviour
 {
-    public float shake;
+    [Range(0,0.1f)]public float shake;
     public float maxPositionOffset;
     public float maxAngleOffset;
     // Start is called before the first frame update
