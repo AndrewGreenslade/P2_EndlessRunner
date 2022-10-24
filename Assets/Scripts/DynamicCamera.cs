@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DynamicCamera : MonoBehaviour
 {
-    private float shake;
-    [Range(0, 1)] public float shakeIntensity;
+    public float shake;
     public float maxPositionOffset;
     public float maxAngleOffset;
     // Start is called before the first frame update
@@ -13,19 +12,23 @@ public class DynamicCamera : MonoBehaviour
     {
         maxPositionOffset = 2;
         maxAngleOffset = 2;
+        shake = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Shake();
+        if (GameManager.instance.player.lives > 0)
+        {
+            Shake();
+        }
+
     }
 
     void Shake()
     {
-
         // Shake is equal to the traum squared to give a smooth curve of shake
-        shake = shakeIntensity * shakeIntensity;
+        shake = (GameManager.instance.distanceScrpt.getDistanceTraveled() * 0.001f);
 
         // Reset Camera rotation
         transform.eulerAngles = new Vector3(0, 0, 0);
@@ -38,6 +41,9 @@ public class DynamicCamera : MonoBehaviour
         // Get current state
         Vector3 currentCameraAngle = transform.eulerAngles;
         Vector3 currentCameraPosition = transform.position;
+
+        //newY = transform.position.y;
+        //Vector3 target = lockedCameraPostion;
 
         // Current state + shake
         Vector3 newCameraAngle = currentCameraAngle + new Vector3(0, 0, offsetAngle);

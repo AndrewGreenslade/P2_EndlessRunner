@@ -78,4 +78,28 @@ public class GameTests
 
         Assert.Less(ds.distanceTraveled, 1);
     }
+
+    [UnityTest]
+    public IEnumerator CameraShake()
+    {
+        GameObject dc = GameObject.Find("Camera");
+
+        yield return new WaitForSeconds(5f);
+
+        Assert.Greater(dc.GetComponent<DynamicCamera>().shake, 0);
+    }
+
+    [UnityTest]
+    public IEnumerator CameraShakeStopsOnPlayerDeath()
+    {
+        GameObject dc = GameObject.Find("Camera");
+
+        GameObject ps = GameObject.Find("Player");
+        ps.GetComponent<PlayerScript>().lives = 0;
+
+        yield return new WaitForSeconds(3f);
+
+        Assert.Less(dc.GetComponent<DynamicCamera>().shake, 0.1f);
+    }
+
 }

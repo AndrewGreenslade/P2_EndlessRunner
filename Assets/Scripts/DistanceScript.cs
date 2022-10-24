@@ -35,4 +35,9 @@ public class DistanceScript : MonoBehaviour
             distanceTimer = 0;
         }
     }
+
+    public int getDistanceTraveled()
+    {
+        return distanceTraveled;
+    }
 }
