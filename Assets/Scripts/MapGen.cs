@@ -16,20 +16,24 @@ public class MapGen : MonoBehaviour
     public int MaxTiles = 6; //max chunk height
     public int MinTiles = 1; //min chunk height
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         LowerLeftScreenPos = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
 
-        for(int i = 0; i < 25; i++)
+        for (int i = 0; i < 25; i++)
         {
-            GameObject myChunk = Instantiate(chunk.gameObject, LowerLeftScreenPos + new Vector2(i * SquareWidth, 0), Quaternion.identity,transform);
+            GameObject myChunk = Instantiate(chunk.gameObject, LowerLeftScreenPos + new Vector2(i * SquareWidth, 0), Quaternion.identity, transform);
             WorldChunk theChunk = myChunk.GetComponent<WorldChunk>();
             theChunk.GenerateChunk(4, sprite);
             chunks.Add(theChunk);
         }
+    }
 
-        InvokeRepeating("removeRandomChunk", 5, 5);
+    // Start is called before the first frame update
+    void Start()
+    {
+        //InvokeRepeating("removeRandomChunk", 10, 10);
     }
 
     // Update is called once per frame
@@ -71,14 +75,15 @@ public class MapGen : MonoBehaviour
 
     void removeRandomChunk()
     {
-        int ChunkToRemove = Random.Range(chunks.Count - 5, chunks.Count -1);
-
-        if (chunks.Count >= ChunkToRemove)
-        {        
-            //destroy a random chunk between 10-15
-            GameObject toDestroy = chunks[ChunkToRemove].gameObject;
-            chunks.Remove(chunks[ChunkToRemove]);
-            Destroy(toDestroy);
-        }
+        //int ChunkToRemove = Random.Range(chunks.Count - 3, chunks.Count);
+        //int childCount = chunks[ChunkToRemove].transform.childCount;
+        ////destroy a random chunk between 10-15
+        //for (int i = 0;i < childCount;i++)
+        //{ 
+        //    GameObject toDestroy = chunks[ChunkToRemove].transform.GetChild(i).gameObject;
+        //    chunks.Remove(chunks[ChunkToRemove]);
+        //    Destroy(toDestroy);
+        //    childCount--;
+        //}
     }
 }
