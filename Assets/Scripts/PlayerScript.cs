@@ -7,34 +7,55 @@ public class PlayerScript : MonoBehaviour
 {
     private GameObject Player;
     public Rigidbody2D rb;
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI livesText;
+
     public int score = 0;
     private int jumpSpeed = 7;
     private float moveSpeed = 3;
     private bool isJumping = false;
     public int lives = 3;
+    private string timesDied;
+    private string distTraveled;
+    private string highScore; 
+
+   
+    //https://docs.google.com/forms/d/e/1FAIpQLSfdbsO2vKysmX5H7sdABY5K6j155kXHvC_E2SpmcHrQ8XzJpA/viewform?usp=pp_url&entry.51372667=IDHERE&entry.1637826786=TIMESDIED&entry.1578808278=HIGHSCORE&entry.2039373689=DISTANCE
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         Player = this.gameObject;
         rb = GetComponent<Rigidbody2D>();
+        timesDied = "10";
+        distTraveled = "6969";
+        highScore = "9999999";
+
     }
 
+
+   
     // Update is called once per frame
     void Update()
     {
         moveLeft();
         moveRight();
         jump();
-        
-        scoreText.text = "Score: " + score.ToString();
-        livesText.text = "Lives: " + lives.ToString();
+        GameManager.instance.livesText.text = "Lives: " + lives.ToString();
+        GameManager.instance.scoreText.text = "Score: " + score.ToString();
+       
+
+        //scoreText.text = "Score: " + score.ToString();
         if (lives <= 0)
+
         {
             Destroy(gameObject);
         }
+
+
+
+      
+
     }
 
     public void moveLeft()
@@ -86,6 +107,13 @@ public class PlayerScript : MonoBehaviour
     public void loseLife()
     {
         lives--;
-        livesText.text = "Lives: " + lives.ToString();
+        GameManager.instance.livesText.text = "Lives: " + lives.ToString();
     }
+
+
+
+
+
+
+
 }
