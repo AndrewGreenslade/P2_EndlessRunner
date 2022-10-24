@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//yes
 public class Runtime2DMovement : MonoBehaviour
 {
     private bool _moveRight;
