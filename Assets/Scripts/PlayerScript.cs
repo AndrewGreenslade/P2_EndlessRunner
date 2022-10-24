@@ -97,6 +97,16 @@ public class PlayerScript : MonoBehaviour
             score++;
             Destroy(collision.gameObject);
         }
+        if(collision.gameObject.tag == "Follower")
+        {
+            lives--;
+        }
+        else
+        if (collision.gameObject.tag == "Shrapnel")
+        {
+            lives--;
+            Destroy(collision.gameObject);
+        }
     }
 
     public void resetPosition()

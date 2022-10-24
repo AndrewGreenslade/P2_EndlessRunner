@@ -33,7 +33,7 @@ public class Bomber : MonoBehaviour
         health = maxHealth;
         // Movement
         rb.velocity = new Vector2(-speed, rb.velocity.y);
-        bomb = Instantiate(bombPassed, new Vector3(rb.position.x, rb.position.y - 1.5f, 0), Quaternion.identity, transform);
+        bomb = Instantiate(bombPassed, new Vector3(rb.position.x, rb.position.y - 0.5f, 0), Quaternion.identity, transform);
         if(!bomb.GetComponent<Bomb>().enabled)
         {
             bomb.GetComponent<Bomb>().enabled = true;
@@ -57,7 +57,6 @@ public class Bomber : MonoBehaviour
                     armed = false;
                 }
             }
-            
         }
     }
 

@@ -25,6 +25,7 @@ public class FlyingFollower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         rb = gameObject.GetComponent<Rigidbody2D>();
         health = maxHealth;
     }
@@ -32,28 +33,31 @@ public class FlyingFollower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (invincible && Vector2.Distance(player.GetComponent<Rigidbody2D>().position, rb.position) < stateDist)
+        if (player != null)
         {
-            invincible = false;
-        }
-        else if (!invincible)
-        {
-            if (rb.position.x < player.GetComponent<Rigidbody2D>().position.x)
+            if (invincible && Vector2.Distance(player.GetComponent<Rigidbody2D>().position, rb.position) < stateDist)
             {
-                rb.velocity = new Vector2(speed, rb.velocity.y);
+                invincible = false;
             }
-            else if (rb.position.x > player.GetComponent<Rigidbody2D>().position.x)
+            else if (!invincible)
             {
-                rb.velocity = new Vector2(-speed, rb.velocity.y);
-            }
+                if (rb.position.x < player.GetComponent<Rigidbody2D>().position.x)
+                {
+                    rb.velocity = new Vector2(speed, rb.velocity.y);
+                }
+                else if (rb.position.x > player.GetComponent<Rigidbody2D>().position.x)
+                {
+                    rb.velocity = new Vector2(-speed, rb.velocity.y);
+                }
 
-            if (rb.position.y < player.GetComponent<Rigidbody2D>().position.y)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, speed);
-            }
-            else if (rb.position.y > player.GetComponent<Rigidbody2D>().position.y)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, -speed);
+                if (rb.position.y < player.GetComponent<Rigidbody2D>().position.y)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, speed);
+                }
+                else if (rb.position.y > player.GetComponent<Rigidbody2D>().position.y)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, -speed);
+                }
             }
         }
     }
@@ -67,6 +71,14 @@ public class FlyingFollower : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
         }
     }
 

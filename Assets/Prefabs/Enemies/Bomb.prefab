@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8668573823833311466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: 8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   dropped: 0
-  ShrapnelPassed: {fileID: 0}
+  ShrapnelPassed: {fileID: 6190054707356309458, guid: 616d694c3765c864093f583c56d26b9c, type: 3}
 --- !u!61 &8668573823833311460
 BoxCollider2D:
   m_ObjectHideFlags: 0
