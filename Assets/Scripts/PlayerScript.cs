@@ -38,9 +38,9 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveLeft();
-        moveRight();
-        jump();
+       // moveLeft();
+      //  moveRight();
+      //  jump();
         GameManager.instance.livesText.text = "Lives: " + lives.ToString();
         GameManager.instance.scoreText.text = "Score: " + score.ToString();
        
@@ -58,30 +58,30 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    public void moveLeft()
-    {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-        }
-    }
+    //public void moveLeft()
+    //{
+    //    if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+    //    {
+    //        rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+    //    }
+    //}
 
-    public void moveRight()
-    {
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-        }
-    }
+    //public void moveRight()
+    //{
+    //    if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+    //    {
+    //        rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+    //    }
+    //}
 
-    public void jump()
-    {
-        if (Input.GetKey(KeyCode.Space) && isJumping == false)
-        {
-            isJumping = true;
-            rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
-        }
-    }
+    //public void jump()
+    //{
+    //    if (Input.GetKey(KeyCode.Space) && isJumping == false)
+    //    {
+    //        isJumping = true;
+    //        rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+    //    }
+    //}
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
