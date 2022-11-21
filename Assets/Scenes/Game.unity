@@ -1278,11 +1278,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1983488521}
-  _walkableSurfaceTagName: 
+  _walkableSurfaceTagName: Ground
   leftKey: 97
   rightKey: 100
   jumpKey: 32
-  impluseJumpVel: 4
+  impluseJumpVel: 7
   TimeToReachMaxHeight: 5.5
   _movementTime: 0.1
   _MAX_WALKING_SPEED: 5
