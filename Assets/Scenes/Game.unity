@@ -617,6 +617,7 @@ MonoBehaviour:
   m_fadeoutSpeed: 5
   m_toggleSpeedZoomOut: 0
   m_toggleFadeOut: 1
+  m_toggleCameraFollowPlayer: 0
 --- !u!1 &874612871
 GameObject:
   m_ObjectHideFlags: 0
