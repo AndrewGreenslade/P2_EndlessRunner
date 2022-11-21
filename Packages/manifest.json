@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "2d.genericgames.expanded.camera.effects": "https://github.com/Leo-Chen-CM/2D-Camera-System.git?path=/2D%20Camera%20Project/Packages/2d.camera.system#v0.2.0",
+    "2d.genericgames.expanded.camera.effects": "https://github.com/Leo-Chen-CM/2D-Camera-System.git?path=/2D%20Camera%20Project/Packages/2d.camera.system#v0.2.2",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.2d": "1.0.0",
     "com.unity.ide.rider": "3.0.15",
