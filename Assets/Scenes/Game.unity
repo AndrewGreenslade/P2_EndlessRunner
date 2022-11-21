@@ -123,6 +123,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &60546005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7325968627209454867, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
+  m_PrefabInstance: {fileID: 7325968627062871284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &60546008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60546005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a3eeb3c1d75b34382a6d1719ee7051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1983488527}
+  bgCanvas: {fileID: 0}
+  targetTime: 0.5
+  continuesJump: 0
+  jumpStateIs: 0
+  doubleJumpCount: 1
+  sprintIsActive: 0
+  dashIsActivated: 0
 --- !u!1 &296839062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6941715806873127092, guid: 2584d53d7507d714cb07a6681ff6cdc6, type: 3}
@@ -626,6 +651,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1861516974489347474, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1861516974489347479, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
       propertyPath: m_Name
       value: Player
@@ -641,7 +670,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1861516974489347474, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
   m_PrefabInstance: {fileID: 1044564197}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1983488520}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7c7c291fbe84c44ada103707f6417e, type: 3}
@@ -1029,6 +1058,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1983488520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1861516974489347479, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+  m_PrefabInstance: {fileID: 1044564197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1983488521 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1861516974489347472, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+  m_PrefabInstance: {fileID: 1044564197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1983488525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983488520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a245a4992d45b4785a891af94c1841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1983488526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983488520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd567b1bd22233d458f24ee387cf15ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementController: {fileID: 0}
+  _MovingWhileJumpingSpeed: 0
+  _isMovingRight: 0
+  _isIdle: 0
+  _isJumping: 0
+  _isMovingLeft: 0
+--- !u!114 &1983488527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983488520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525ac1a52506b874b9ce9a562918a518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1983488521}
+  lives: 3
+--- !u!114 &1983488528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983488520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b808ac3062138842878617faf3113c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1983488521}
+  _walkableSurfaceTagName: 
+  leftKey: 97
+  rightKey: 100
+  jumpKey: 32
+  impluseJumpVel: 4
+  TimeToReachMaxHeight: 5.5
+  _movementTime: 0.1
+  _MAX_WALKING_SPEED: 5
+  _LOWEST_WALKING_SPEED: 0.3
+  _MAX_SLOWWALKING_SPEED: 3
+  _LOWEST_SLOWWALKING_SPEED: 1.6
+  acclearation: 17
+  playerGravity: 1
 --- !u!114 &2007444620 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7325968626263668856, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}

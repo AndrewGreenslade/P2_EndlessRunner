@@ -8,8 +8,8 @@ public class BoundingBox : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerScript>().resetPosition();
-            collision.gameObject.GetComponent<PlayerScript>().loseLife();
+            collision.gameObject.GetComponent<PlayerController>().resetPosition();
+            collision.gameObject.GetComponent<PlayerController>().loseLife();
         }
     }
 }

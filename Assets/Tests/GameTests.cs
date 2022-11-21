@@ -48,7 +48,7 @@ public class GameTests
 
         yield return new WaitForSeconds(0.1f);
 
-        Assert.Less(player.GetComponent<PlayerScript>().lives, 3);
+        Assert.Less(player.GetComponent<PlayerController>().lives, 3);
     }
 
     [UnityTest]

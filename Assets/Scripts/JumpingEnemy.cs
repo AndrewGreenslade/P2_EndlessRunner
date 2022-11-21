@@ -52,7 +52,7 @@ public class JumpingEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerScript>().loseLife();
+            collision.gameObject.GetComponent<PlayerController>().loseLife();
             Destroy(gameObject);
         }
     }

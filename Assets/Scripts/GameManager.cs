@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public int highScore = 0;
 
     public GameObject restartButton;
-    public PlayerScript player;
+    public PlayerController player;
     public TextMeshProUGUI hScoreText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
         instance.distanceScrpt = FindObjectOfType<DistanceScript>();
         instance.bgCanvas.worldCamera = Camera.main;
-        instance.player = FindObjectOfType<PlayerScript>();
+        instance.player = FindObjectOfType<PlayerController>();
         instance.restartButton.SetActive(false);
     }
 

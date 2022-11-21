@@ -6,7 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class DistanceScript : MonoBehaviour
 {
-    public PlayerScript player;
+    public PlayerController player;
     public TextMeshProUGUI distanceText;
     public int distanceTraveled;
     public int distanceTimer;

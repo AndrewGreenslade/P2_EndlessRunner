@@ -29,7 +29,7 @@ public class MapGen : MonoBehaviour
             chunks.Add(theChunk);
         }
 
-        InvokeRepeating("removeRandomChunk", 5, 5);
+       // InvokeRepeating("removeRandomChunk", 5, 5);
     }
 
     // Update is called once per frame

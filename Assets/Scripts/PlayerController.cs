@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private GameObject Player;
     public Rigidbody2D rb;
@@ -38,9 +38,9 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveLeft();
-        moveRight();
-        jump();
+        //moveLeft();
+        //moveRight();
+        //jump();
         GameManager.instance.livesText.text = "Lives: " + lives.ToString();
         GameManager.instance.scoreText.text = "Score: " + score.ToString();
        
