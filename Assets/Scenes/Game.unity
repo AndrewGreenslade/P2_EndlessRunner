@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1983488527}
+  jumpModeText: {fileID: 0}
   bgCanvas: {fileID: 0}
   targetTime: 0.5
   continuesJump: 0
@@ -600,6 +601,21 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &719944141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296839062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3c51006a627b1499b31a1294c0eac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fadeoutSpeed: 5
+  m_toggleSpeedZoomOut: 0
+  m_toggleFadeOut: 1
 --- !u!1001 &1044564197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1138,6 +1154,23 @@ MonoBehaviour:
   _LOWEST_SLOWWALKING_SPEED: 1.6
   acclearation: 17
   playerGravity: 1
+--- !u!114 &1983488532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983488520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1ed2e96b3e44447b60b926f8805154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1983488521}
+  jumpForce: 5
+  jumpCount: 0
+  jumpsAllowed: 100
+  dust: {fileID: 0}
 --- !u!114 &2007444620 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7325968626263668856, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
