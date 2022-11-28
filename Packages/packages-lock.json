@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "2d.genericgames.expanded.camera.effects": {
-      "version": "https://github.com/Leo-Chen-CM/2D-Camera-System.git?path=/2D%20Camera%20Project/Packages/2d.camera.system#v0.2.2",
+      "version": "https://github.com/Leo-Chen-CM/2D-Camera-System.git?path=/2D%20Camera%20Project/Packages/2d.camera.system",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "da5920daa350f6a720a6571b43f12aee90e5505f"
+      "hash": "a660925d52c03f4961107fea511c0d0457ea345a"
     },
     "com.unity.2d.animation": {
       "version": "7.0.7",

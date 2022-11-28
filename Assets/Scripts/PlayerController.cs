@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     public int lives = 3;
     private float infectionVisibility = 0.0f;
     public float tempValueInfection = 0.0f;
-    SpriteRenderer sprite;
+    SpriteRenderer sprite; 
+    public Camera m_cameraMain;
 
 
 
@@ -28,6 +29,8 @@ public class PlayerController : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
 
         InvokeRepeating("IncreaseInfection", infectionSpeedIncrease, infectionSpeedIncrease);
+
+        //m_cameraMain = Camera.main.GetComponent<CameraSystem2D>();
     }
 
 
@@ -87,6 +90,7 @@ public class PlayerController : MonoBehaviour
         if (GameManager.instance.infection <= 100)
         {
             GameManager.instance.infection++;
+            m_cameraMain.GetComponent<CameraSystem2D>().AssignVignetteValue(GameManager.instance.infection);           
         }
     }
 
