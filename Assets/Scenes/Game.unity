@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1983488527}
-  jumpModeText: {fileID: 0}
   bgCanvas: {fileID: 0}
   targetTime: 0.5
   continuesJump: 0
@@ -1279,6 +1278,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 20.660156
       objectReference: {fileID: 0}
+    - target: {fileID: 7325968626574140544, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
+      propertyPath: m_text
+      value: 'Infection: 0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325968626574140550, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
+      propertyPath: m_Name
+      value: Infection
+      objectReference: {fileID: 0}
     - target: {fileID: 7325968626574140551, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 20.660156
@@ -1307,6 +1314,10 @@ PrefabInstance:
       propertyPath: hScoreText
       value: 
       objectReference: {fileID: 2007444620}
+    - target: {fileID: 7325968627209454876, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
+      propertyPath: infectionText
+      value: 
+      objectReference: {fileID: 1697034356}
     - target: {fileID: 7325968627209454876, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
       propertyPath: nextLevelText
       value: 
