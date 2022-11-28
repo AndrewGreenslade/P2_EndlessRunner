@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI nextLevelText;
     public Canvas bgCanvas;
     private float targetTime = 0.0f;
+    public float infection = 0.0f;
 
     public static GameManager instance;
     public DistanceScript distanceScrpt;

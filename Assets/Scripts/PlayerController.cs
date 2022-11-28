@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     private GameObject Player;
     public Rigidbody2D rb;
 
-    public float infection = 0.0f;
     public float infectionSpeedIncrease = 2.0f;
     public int lives = 3;
     private float infectionVisibility = 0.0f;
@@ -38,7 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.instance.livesText.text = "Lives: " + lives.ToString();
 
-        GameManager.instance.infectionText.text = "Infection: " + infection.ToString() + "%";
+        GameManager.instance.infectionText.text = "Infection: " + GameManager.instance.infection.ToString() + "%";
 
 
         //scoreText.text = "Score: " + score.ToString();
@@ -47,7 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        tempValueInfection = infection / 100;
+        tempValueInfection = GameManager.instance.infection / 100;
 
         sprite.color = new Color(1, 1 - tempValueInfection, 1 - tempValueInfection, 1);
 
@@ -85,9 +84,9 @@ public class PlayerController : MonoBehaviour
 
     void IncreaseInfection()
     {
-        if (infection <= 100)
+        if (GameManager.instance.infection <= 100)
         {
-            infection++;
+            GameManager.instance.infection++;
         }
     }
 

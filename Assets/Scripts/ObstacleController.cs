@@ -40,8 +40,9 @@ public class ObstacleController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.GetComponent<PlayerController>().loseLife();
-
+            GameManager.instance.infection = GameManager.instance.infection + 10;
             Destroy(gameObject);
+
         }
     }
 
