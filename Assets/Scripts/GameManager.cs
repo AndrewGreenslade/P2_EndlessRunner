@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI hScoreText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
+    public TextMeshProUGUI nextLevelText;
     public Canvas bgCanvas;
     private float targetTime = 0.0f;
 
@@ -90,11 +91,26 @@ public class GameManager : MonoBehaviour
 
             targetTime -= Time.deltaTime;
 
-            if(distanceScrpt.distanceTraveled >= 10)
+            if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Game"))
             {
-                instance.nextLevelButton.SetActive(true);
-            }
+                instance.nextLevelText.text = "Level2";
 
+                if (distanceScrpt.distanceTraveled >= 10)
+                {
+                    instance.nextLevelButton.SetActive(true);
+
+                }
+            }
+            else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
+            {
+                instance.nextLevelText.text = "Level3";
+
+                if (distanceScrpt.distanceTraveled >= 50)
+                {
+                    instance.nextLevelButton.SetActive(true);
+
+                }
+            }
 
 
             if (Input.GetKey(KeyCode.L))
