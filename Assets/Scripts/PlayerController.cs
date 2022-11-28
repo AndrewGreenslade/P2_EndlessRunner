@@ -50,9 +50,7 @@ public class PlayerController : MonoBehaviour
         tempValueInfection = infection / 100;
 
         sprite.color = new Color(1, 1 - tempValueInfection, 1 - tempValueInfection, 1);
-        //0,1,1,1
-        //1,1,1,1
-        //1,0,0,1
+       
 
     }
 
