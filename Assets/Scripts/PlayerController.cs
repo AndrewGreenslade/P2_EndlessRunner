@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         //jump();
         GameManager.instance.livesText.text = "Lives: " + lives.ToString();
         GameManager.instance.scoreText.text = "Score: " + score.ToString();
-       
+
 
         //scoreText.text = "Score: " + score.ToString();
         if (lives <= 0)
