@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int highScore = 0;
 
     public GameObject restartButton;
+    public GameObject nextLevelButton;
     public PlayerController player;
     public TextMeshProUGUI hScoreText;
     public TextMeshProUGUI scoreText;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         instance.bgCanvas.worldCamera = Camera.main;
         instance.player = FindObjectOfType<PlayerController>();
         instance.restartButton.SetActive(false);
+        instance.nextLevelButton.SetActive(false);
     }
 
 
@@ -88,7 +90,10 @@ public class GameManager : MonoBehaviour
 
             targetTime -= Time.deltaTime;
 
-
+            if(distanceScrpt.distanceTraveled >= 10)
+            {
+                instance.nextLevelButton.SetActive(true);
+            }
 
 
 
@@ -119,6 +124,15 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene("Level3");
+    }
 
 
     string uniqueID()
