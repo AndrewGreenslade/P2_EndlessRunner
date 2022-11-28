@@ -13,7 +13,11 @@ GameObject:
   - component: {fileID: 1861516974489347474}
   - component: {fileID: 1861516974489347473}
   - component: {fileID: 1861516974489347472}
-  m_Layer: 0
+  - component: {fileID: 1983488525}
+  - component: {fileID: 1983488526}
+  - component: {fileID: 1983488527}
+  - component: {fileID: 1983488528}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -99,10 +103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7c7c291fbe84c44ada103707f6417e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  scoreText: {fileID: 0}
-  score: 0
+  rb: {fileID: 1861516974489347472}
+  infectionSpeedIncrease: 2
   lives: 3
+  tempValueInfection: 0
+  m_cameraMain: {fileID: 0}
 --- !u!61 &1861516974489347473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,3 +155,73 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1983488525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861516974489347479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a245a4992d45b4785a891af94c1841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1983488526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861516974489347479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd567b1bd22233d458f24ee387cf15ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementController: {fileID: 0}
+  _MovingWhileJumpingSpeed: 0
+  _isMovingRight: 0
+  _isIdle: 0
+  _isJumping: 0
+  _isMovingLeft: 0
+--- !u!114 &1983488527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861516974489347479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525ac1a52506b874b9ce9a562918a518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1861516974489347472}
+  lives: 3
+--- !u!114 &1983488528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861516974489347479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b808ac3062138842878617faf3113c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1861516974489347472}
+  _walkableSurfaceTagName: Ground
+  leftKey: 97
+  rightKey: 100
+  jumpKey: 32
+  impluseJumpVel: 7
+  TimeToReachMaxHeight: 5.5
+  _movementTime: 0.1
+  _MAX_WALKING_SPEED: 5
+  _LOWEST_WALKING_SPEED: 0.3
+  _MAX_SLOWWALKING_SPEED: 3
+  _LOWEST_SLOWWALKING_SPEED: 1.6
+  acclearation: 17
+  playerGravity: 1
