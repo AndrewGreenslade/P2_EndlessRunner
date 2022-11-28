@@ -52,9 +52,8 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
 
-
-
-      
+        sprite.color = new Color(1, 1 - tempValueInfection, 1 - tempValueInfection, 1);
+       
 
     }
 
