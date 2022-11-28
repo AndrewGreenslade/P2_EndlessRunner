@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour
     public int highScore = 0;
 
     public GameObject restartButton;
+    public GameObject nextLevelButton;
     public PlayerController player;
     public TextMeshProUGUI hScoreText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
+    public TextMeshProUGUI nextLevelText;
     public Canvas bgCanvas;
     private float targetTime = 0.0f;
 
@@ -42,6 +44,7 @@ public class GameManager : MonoBehaviour
         instance.bgCanvas.worldCamera = Camera.main;
         instance.player = FindObjectOfType<PlayerController>();
         instance.restartButton.SetActive(false);
+        instance.nextLevelButton.SetActive(false);
     }
 
 
@@ -88,8 +91,26 @@ public class GameManager : MonoBehaviour
 
             targetTime -= Time.deltaTime;
 
+            if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Game"))
+            {
+                instance.nextLevelText.text = "Level2";
 
+                if (distanceScrpt.distanceTraveled >= 10)
+                {
+                    instance.nextLevelButton.SetActive(true);
 
+                }
+            }
+            else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
+            {
+                instance.nextLevelText.text = "Level3";
+
+                if (distanceScrpt.distanceTraveled >= 50)
+                {
+                    instance.nextLevelButton.SetActive(true);
+
+                }
+            }
 
 
             if (Input.GetKey(KeyCode.L))
@@ -119,6 +140,15 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene("Level3");
+    }
 
 
     string uniqueID()
