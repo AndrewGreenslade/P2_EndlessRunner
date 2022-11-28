@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
                 instance.hScoreText.text = "High Score: " + instance.highScore;
                 instance.highScore = instance.distanceScrpt.distanceTraveled;
             }
-            if (player.lives <= 0)
+            if (distanceScrpt.distanceTraveled <= 10)
             {
                 instance.restartButton.SetActive(true);
             }
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
             {
                 instance.nextLevelText.text = "Level3";
 
-                if (distanceScrpt.distanceTraveled >= 50)
+                if (distanceScrpt.distanceTraveled >= 10)
                 {
                     instance.nextLevelButton.SetActive(true);
 
@@ -134,8 +134,9 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-
+        
         instance.hScoreText.text = "High Score: " + instance.highScore;
+        instance.infection = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
