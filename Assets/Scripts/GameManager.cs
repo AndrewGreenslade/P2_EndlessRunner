@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject restartButton;
     public PlayerController player;
     public TextMeshProUGUI hScoreText;
-    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI infectionText;
     public TextMeshProUGUI livesText;
     public Canvas bgCanvas;
     private float targetTime = 0.0f;
@@ -72,10 +72,10 @@ public class GameManager : MonoBehaviour
     {
         if (instance != null)
         {
-            if (instance.highScore <= instance.player.score)
+            if (instance.highScore <= instance.distanceScrpt.distanceTraveled)
             {
                 instance.hScoreText.text = "High Score: " + instance.highScore;
-                instance.highScore = instance.player.score;
+                instance.highScore = instance.distanceScrpt.distanceTraveled;
             }
 
             if (player.lives <= 0)
