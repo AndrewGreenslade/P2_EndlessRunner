@@ -46,13 +46,10 @@ public class ObstacleController : MonoBehaviour
         {
             GameManager.instance.infection = GameManager.instance.infection + 10;
             Instantiate(m_sporeParticle,transform.position, Quaternion.identity);
-            //m_sporeParticle.transform.position = gameObject.transform.position;
-            //m_sporeParticle.Emit(100);
-            //m_sporeParticle.Play();
-            //DestroyImmediate(m_sporeParticle);
             Destroy(gameObject);
 
         }
     }
+
 
 }
