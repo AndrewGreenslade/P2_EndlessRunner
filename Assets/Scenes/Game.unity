@@ -1053,8 +1053,6 @@ MonoBehaviour:
   player: {fileID: 1044564198}
   distanceText: {fileID: 1483754806}
   distanceTraveled: 0
-  distanceTimer: 0
-  playerLives: 0
 --- !u!4 &1815909633
 Transform:
   m_ObjectHideFlags: 0
@@ -1101,7 +1099,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4440867282935083585, guid: 8ad40e8f460094b4487064c7a1fba639, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
-      value: 150
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4440867282935083586, guid: 8ad40e8f460094b4487064c7a1fba639, type: 3}
       propertyPath: m_RootOrder
@@ -1236,6 +1234,10 @@ PrefabInstance:
       propertyPath: hScoreText
       value: 
       objectReference: {fileID: 2007444620}
+    - target: {fileID: 7325968627209454876, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
+      propertyPath: distanceScrpt
+      value: 
+      objectReference: {fileID: 1815909632}
     - target: {fileID: 7325968627209454876, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
       propertyPath: infectionText
       value: 

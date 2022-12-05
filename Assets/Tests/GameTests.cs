@@ -38,32 +38,4 @@ public class GameTests
 
         Assert.Greater(enemy.transform.position.y, 0);
     }
-
-    [UnityTest]
-    public IEnumerator DistanceAdditionChecker()
-    {
-        DistanceScript ds = new DistanceScript();
-        int startDistance = ds.distanceTraveled;
-        ds.distanceTimer = 300;
-        ds.playerLives = 3;
-        ds.addDistance();
-
-        yield return new WaitForSeconds(1f);
-
-        Assert.Greater(ds.distanceTraveled, startDistance);
-    }
-
-    [UnityTest]
-    public IEnumerator DistanceAdditionWhileDeadChecker()
-    {
-        DistanceScript ds = new DistanceScript();
-        ds.distanceTraveled = 0;
-        ds.distanceTimer = 300;
-        ds.playerLives = 0;
-        ds.addDistance();
-
-        yield return new WaitForSeconds(1f);
-
-        Assert.Less(ds.distanceTraveled, 1);
-    }
 }

@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
             if (instance.highScore <= instance.distanceScrpt.distanceTraveled)
             {
                 instance.hScoreText.text = "High Score: " + instance.highScore;
-                instance.highScore = instance.distanceScrpt.distanceTraveled;
+                instance.highScore = (int)instance.distanceScrpt.distanceTraveled;
             }
             if (instance.infection >= 100)
             {

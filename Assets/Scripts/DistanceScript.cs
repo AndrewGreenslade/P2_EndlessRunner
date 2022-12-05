@@ -8,30 +8,13 @@ public class DistanceScript : MonoBehaviour
 {
     public PlayerController player;
     public TextMeshProUGUI distanceText;
-    public int distanceTraveled;
-    public int distanceTimer;
-    public int playerLives;
-    private const int DISTANCE_INCREMENT_TIMER = 300;
-    // Start is called before the first frame update
-    void Start()
-    {
-        distanceTimer = 0;
-    }
+    public float distanceTraveled;
 
     // Update is called once per frame
     void Update()
     {
-        distanceTimer++;
-        addDistance();
-        distanceText.text = "Distance: " + distanceTraveled.ToString();
-    }
-
-    public void addDistance()
-    {
-        if (distanceTimer >= DISTANCE_INCREMENT_TIMER && playerLives > 0)
-        {
-            distanceTraveled++;
-            distanceTimer = 0;
-        }
+        distanceTraveled += Time.deltaTime;
+        int distanceTextDisplay = (int)distanceTraveled;
+        distanceText.text = "Distance: " + distanceTextDisplay.ToString();
     }
 }
