@@ -137,6 +137,10 @@ public class GameManager : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
         }
     }
 
