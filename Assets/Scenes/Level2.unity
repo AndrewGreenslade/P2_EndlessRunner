@@ -187,6 +187,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1133649662, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133649662, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.257
+      objectReference: {fileID: 0}
     - target: {fileID: 1983488528, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
       propertyPath: _movementTime
       value: 1
@@ -1177,7 +1185,7 @@ GameObject:
   - component: {fileID: 2097259247}
   - component: {fileID: 2097259246}
   - component: {fileID: 2097259245}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Ground
   m_Icon: {fileID: 0}

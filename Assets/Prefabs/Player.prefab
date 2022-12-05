@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1133649661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1133649662}
+  m_Layer: 0
+  m_Name: raycast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1133649662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133649661}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.238, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1861516974489347468}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861516974489347479
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,7 +66,8 @@ Transform:
   m_LocalPosition: {x: 3.8013887, y: -1.1838222, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1133649662}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -120,7 +152,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.0037643313}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -131,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.66, y: 2.56}
+  m_Size: {x: 1.66, y: 2.5524712}
   m_EdgeRadius: 0
 --- !u!50 &1861516974489347472
 Rigidbody2D:
@@ -210,18 +242,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b808ac3062138842878617faf3113c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isJumping: 0
+  _isGrounded: 0
   rb: {fileID: 1861516974489347472}
-  _walkableSurfaceTagName: Ground
+  _walkableSurfaceLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  raycastTemp: {fileID: 1133649661}
   leftKey: 97
   rightKey: 100
   jumpKey: 32
-  impluseJumpVel: 5
+  impluseJumpVel: 6
   TimeToReachMaxHeight: 0.5
   _movementTime: 1
   _MAX_WALKING_SPEED: 5
   _LOWEST_WALKING_SPEED: 0.3
   _MAX_SLOWWALKING_SPEED: 3
   _LOWEST_SLOWWALKING_SPEED: 3
-  changeJumpHeightOnJump3: 1.2
+  changeJumpHeightOnJump3: 1
+  raycastDistance: 0.014
   acclearation: 17
   playerGravity: 1
