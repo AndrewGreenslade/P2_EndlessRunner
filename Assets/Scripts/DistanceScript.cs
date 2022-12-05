@@ -24,7 +24,6 @@ public class DistanceScript : MonoBehaviour
         distanceTimer++;
         addDistance();
         distanceText.text = "Distance: " + distanceTraveled.ToString();
-        playerLives = player.lives;
     }
 
     public void addDistance()

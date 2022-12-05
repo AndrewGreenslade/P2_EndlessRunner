@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
     public TextMeshProUGUI hScoreText;
     public TextMeshProUGUI infectionText;
-    public TextMeshProUGUI livesText;
     public TextMeshProUGUI nextLevelText;
     public Canvas bgCanvas;
     private float targetTime = 0.0f;
@@ -81,7 +80,7 @@ public class GameManager : MonoBehaviour
                 instance.hScoreText.text = "High Score: " + instance.highScore;
                 instance.highScore = instance.distanceScrpt.distanceTraveled;
             }
-            if (distanceScrpt.distanceTraveled <= 10)
+            if (instance.infection >= 100)
             {
                 instance.restartButton.SetActive(true);
             }
@@ -95,7 +94,7 @@ public class GameManager : MonoBehaviour
             {
                 instance.nextLevelText.text = "Level2";
 
-                if (distanceScrpt.distanceTraveled >= 10)
+                if (distanceScrpt.distanceTraveled >= 50)
                 {
                     instance.nextLevelButton.SetActive(true);
 
@@ -105,7 +104,7 @@ public class GameManager : MonoBehaviour
             {
                 instance.nextLevelText.text = "Level3";
 
-                if (distanceScrpt.distanceTraveled >= 10)
+                if (distanceScrpt.distanceTraveled >= 50)
                 {
                     instance.nextLevelButton.SetActive(true);
 
@@ -143,11 +142,28 @@ public class GameManager : MonoBehaviour
 
     public void Level2()
     {
+        
+        if(instance.infection >= 20)
+        {
+            instance.infection -= 20;
+        }
+        else
+        {
+            instance.infection = 0;
+        }
         SceneManager.LoadScene("Level2");
     }
 
     public void Level3()
     {
+        if (instance.infection >= 20)
+        {
+            instance.infection -= 20;
+        }
+        else
+        {
+            instance.infection = 0;
+        }
         SceneManager.LoadScene("Level3");
     }
 

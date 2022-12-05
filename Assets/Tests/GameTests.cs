@@ -40,18 +40,6 @@ public class GameTests
     }
 
     [UnityTest]
-    public IEnumerator BoundingBoxChecker()
-    {
-        GameObject player = GameObject.Find("Player");
-
-        player.transform.position = new Vector3(0, -5, 0);
-
-        yield return new WaitForSeconds(0.1f);
-
-        Assert.Less(player.GetComponent<PlayerController>().lives, 3);
-    }
-
-    [UnityTest]
     public IEnumerator DistanceAdditionChecker()
     {
         DistanceScript ds = new DistanceScript();

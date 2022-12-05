@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
 
     public float infectionSpeedIncrease = 2.0f;
-    public int lives = 3;
     private float infectionVisibility = 0.0f;
     public float tempValueInfection = 0.0f;
     SpriteRenderer sprite; 
@@ -38,14 +37,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameManager.instance.livesText.text = "Lives: " + lives.ToString();
 
         GameManager.instance.infectionText.text = "Infection: " + GameManager.instance.infection.ToString() + "%";
 
 
         //scoreText.text = "Score: " + score.ToString();
-        if (lives <= 0)
-
+        if (GameManager.instance.infection >= 100)
         {
             Destroy(gameObject);
         }
@@ -75,12 +72,6 @@ public class PlayerController : MonoBehaviour
     public void resetPosition()
     {
         transform.position = new Vector3(0, 0, 0);
-    }
-
-    public void loseLife()
-    {
-        lives--;
-        GameManager.instance.livesText.text = "Lives: " + lives.ToString();
     }
 
 

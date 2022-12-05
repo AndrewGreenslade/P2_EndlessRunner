@@ -9,7 +9,6 @@ public class BoundingBox : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerController>().resetPosition();
-            collision.gameObject.GetComponent<PlayerController>().loseLife();
         }
     }
 }

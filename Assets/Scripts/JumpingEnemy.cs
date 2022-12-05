@@ -52,7 +52,6 @@ public class JumpingEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerController>().loseLife();
             GameManager.instance.infection = GameManager.instance.infection + 10;
 
             Destroy(gameObject);

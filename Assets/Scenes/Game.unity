@@ -761,17 +761,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0927aadeabca82243a9ffb5a5ebfc0b6, type: 3}
---- !u!114 &1287916518 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7325968626186002194, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
-  m_PrefabInstance: {fileID: 7325968627062871284}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1328717860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1110,6 +1099,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4440867282935083585, guid: 8ad40e8f460094b4487064c7a1fba639, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 4440867282935083586, guid: 8ad40e8f460094b4487064c7a1fba639, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1169,7 +1162,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 70420814, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 70420815, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1230,7 +1223,7 @@ PrefabInstance:
     - target: {fileID: 7325968627209454876, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
       propertyPath: livesText
       value: 
-      objectReference: {fileID: 1287916518}
+      objectReference: {fileID: 0}
     - target: {fileID: 7325968627209454876, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
       propertyPath: scoreText
       value: 
