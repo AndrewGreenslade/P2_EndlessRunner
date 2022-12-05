@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleBody: {fileID: 0}
+  m_sporeParticle: {fileID: 2145174150472662736, guid: bd143be603fab4c45a491038dc250b4c, type: 3}
 --- !u!50 &4838138517132251810
 Rigidbody2D:
   serializedVersion: 4
