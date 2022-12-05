@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
     {
         instance.hScoreText.text = "High Score: " + instance.highScore;
         instance.infection = 0;
+        distanceScrpt.distanceTraveled = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
