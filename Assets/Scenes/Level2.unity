@@ -187,6 +187,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1983488528, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: _movementTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983488528, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: impluseJumpVel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983488528, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: TimeToReachMaxHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1861516974489347468, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
       propertyPath: m_RootOrder
       value: 13
