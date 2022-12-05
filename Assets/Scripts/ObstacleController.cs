@@ -15,6 +15,11 @@ public class ObstacleController : MonoBehaviour
 
     Vector3 newRotation = new Vector3(75, 0, 0);
 
+    [SerializeField]
+    //private GameObject m_sporeParticle;
+    //private ParticleSystem m_sporeParticle;
+    private GameObject m_sporeParticle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +45,11 @@ public class ObstacleController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GameManager.instance.infection = GameManager.instance.infection + 10;
+            Instantiate(m_sporeParticle,transform.position, Quaternion.identity);
             Destroy(gameObject);
 
         }
     }
+
 
 }
