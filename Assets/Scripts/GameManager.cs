@@ -99,7 +99,6 @@ public class GameManager : MonoBehaviour
                 if (distanceScrpt.distanceTraveled >= 50)
                 {
                     instance.nextLevelButton.SetActive(true);
-
                 }
             }
             else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
@@ -147,7 +146,7 @@ public class GameManager : MonoBehaviour
             instance.infection = 0;
         }
         SceneManager.LoadScene("Level2");
-
+        distanceScrpt.distanceTraveled = 0;
         FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
     }
 
@@ -162,7 +161,7 @@ public class GameManager : MonoBehaviour
             instance.infection = 0;
         }
         SceneManager.LoadScene("Level3");
-
+        distanceScrpt.distanceTraveled = 0;
         FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
     }
 
