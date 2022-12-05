@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int highScore = 0;
 
     public GameObject restartButton;
+    public GameObject menuExitButton;
     public GameObject nextLevelButton;
     public PlayerController player;
     public TextMeshProUGUI hScoreText;
@@ -44,7 +45,13 @@ public class GameManager : MonoBehaviour
         instance.bgCanvas.worldCamera = Camera.main;
         instance.player = FindObjectOfType<PlayerController>();
         instance.restartButton.SetActive(false);
-        instance.nextLevelButton.SetActive(false);
+        if (SceneManager.GetActiveScene().name == "EndlessMode")
+        {
+            instance.menuExitButton.SetActive(false);
+        }
+        else {
+            instance.nextLevelButton.SetActive(false);
+        }
     }
 
     IEnumerator Post()//, string email, string phone)
@@ -79,6 +86,7 @@ public class GameManager : MonoBehaviour
             if (instance.infection >= 100)
             {
                 instance.restartButton.SetActive(true);
+                instance.menuExitButton.SetActive(true);
             }
 
             if(instance.infection < 0)
@@ -94,6 +102,7 @@ public class GameManager : MonoBehaviour
 
             if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Game"))
             {
+
                 instance.nextLevelText.text = "Level2";
 
                 if (distanceScrpt.distanceTraveled >= 50)
@@ -111,6 +120,7 @@ public class GameManager : MonoBehaviour
 
                 }
             }
+           
 
             if (Input.GetKey(KeyCode.L))
             {
@@ -123,6 +133,10 @@ public class GameManager : MonoBehaviour
                     targetTime = 5.0f;
                 }
             }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Menu"))
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 
@@ -130,10 +144,14 @@ public class GameManager : MonoBehaviour
     {
         instance.hScoreText.text = "High Score: " + instance.highScore;
         instance.infection = 0;
-        distanceScrpt.distanceTraveled = 0;
+        instance.distanceScrpt.distanceTraveled = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void ExitToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
     public void Level2()
     {
