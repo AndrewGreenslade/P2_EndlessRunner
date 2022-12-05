@@ -84,6 +84,11 @@ public class GameManager : MonoBehaviour
             {
                 instance.restartButton.SetActive(true);
             }
+            if(instance.infection < 0)
+            {
+                instance.infection = 0;
+            }
+
 
             deviceID = uniqueID();
             BASE_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfdbsO2vKysmX5H7sdABY5K6j155kXHvC_E2SpmcHrQ8XzJpA/viewform?usp=pp_url&entry.51372667=" + deviceID + "&entry.1637826786=" + "1" + "&entry.1578808278=" + instance.highScore + " &entry.2039373689=" + distanceScrpt.distanceTraveled;

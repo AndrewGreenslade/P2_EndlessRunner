@@ -63,8 +63,9 @@ public class PlayerController : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Coin")
+        if (collision.gameObject.tag == "Sample")
         {
+            GameManager.instance.infection -= 5;
             Destroy(collision.gameObject);
         }
     }

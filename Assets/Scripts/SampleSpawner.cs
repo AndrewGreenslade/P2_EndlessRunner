@@ -2,37 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinSpawner : MonoBehaviour
+public class SampleSpawner : MonoBehaviour
 {
-    public GameObject coinPrefab;
-    private GameObject coinClone;
+    public GameObject samplePrefab;
+    private GameObject sampleClone;
     private float timeLeft;
-    private float timeCoinSpawn = 0.5f;
+    private float timeSampleSpawn = 0.5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeLeft = timeCoinSpawn;
+        timeLeft = timeSampleSpawn;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeCoinSpawn = Random.Range(2, 6);
+        timeSampleSpawn = Random.Range(2, 6);
 
 
         //InvokeRepeating("spawnEnemy", 10, 10);
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
         {
-            spawnEnemy();
-            timeLeft = timeCoinSpawn;
+            spawnSample();
+            timeLeft = timeSampleSpawn;
         }
 
     }
 
 
-    void spawnEnemy()
+    void spawnSample()
     {
         //obstacleClone = Instantiate(obstaclePrefab, new Vector2(10.0f,-2.4f), Quaternion.identity);
 
@@ -40,7 +40,7 @@ public class CoinSpawner : MonoBehaviour
         int ChunkToRemove = Random.Range(mapgener.chunks.Count - 8, mapgener.chunks.Count);
         Vector3 newPos = mapgener.chunks[ChunkToRemove].GetComponent<WorldChunk>().topTile.position + new Vector3(0, 0.9f, 0);
 
-        coinClone = Instantiate(coinPrefab, newPos, Quaternion.identity, mapgener.chunks[ChunkToRemove].transform);
+        sampleClone = Instantiate(samplePrefab, newPos, Quaternion.identity, mapgener.chunks[ChunkToRemove].transform);
 
     }
 }

@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 70420816}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7325968627209454876}
+        m_TargetAssemblyTypeName: GameManager, Game
+        m_MethodName: Level2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &576102733
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +731,7 @@ GameObject:
   - component: {fileID: 7325968626574140545}
   - component: {fileID: 7325968626574140544}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Infection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -773,7 +785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score: 0'
+  m_text: 'Infection: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1123,6 +1135,7 @@ GameObject:
   - component: {fileID: 7325968627209454877}
   - component: {fileID: 7325968627209454876}
   - component: {fileID: 60546008}
+  - component: {fileID: 8285908966591454382}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1161,17 +1174,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highScore: 0
   restartButton: {fileID: 7325968626921089197}
-  nextLevelButton: {fileID: 0}
+  nextLevelButton: {fileID: 70420813}
   player: {fileID: 0}
   hScoreText: {fileID: 7325968626263668856}
-  infectionText: {fileID: 0}
-  livesText: {fileID: 0}
-  nextLevelText: {fileID: 0}
+  infectionText: {fileID: 7325968626574140544}
+  nextLevelText: {fileID: 1798253860}
   bgCanvas: {fileID: 7325968627692164823}
   infection: 0
   distanceScrpt: {fileID: 0}
   BASE_URL: https://docs.google.com/forms/d/e/1FAIpQLSfdbsO2vKysmX5H7sdABY5K6j155kXHvC_E2SpmcHrQ8XzJpA/viewform?usp=pp_url&entry.51372667=
 --- !u!114 &60546008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325968627209454867}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a3eeb3c1d75b34382a6d1719ee7051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  jumpModeText: {fileID: 0}
+  bgCanvas: {fileID: 0}
+  targetTime: 0.5
+  continuesJump: 0
+  jumpStateIs: 0
+  doubleJumpCount: 1
+  sprintIsActive: 0
+  dashIsActivated: 0
+--- !u!114 &8285908966591454382
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

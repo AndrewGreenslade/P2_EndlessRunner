@@ -105,7 +105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1861516974489347472}
   infectionSpeedIncrease: 2
-  lives: 3
   tempValueInfection: 0
   m_cameraMain: {fileID: 0}
 --- !u!61 &1861516974489347473
