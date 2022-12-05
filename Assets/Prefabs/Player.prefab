@@ -215,12 +215,13 @@ MonoBehaviour:
   leftKey: 97
   rightKey: 100
   jumpKey: 32
-  impluseJumpVel: 7
-  TimeToReachMaxHeight: 5.5
-  _movementTime: 0.1
+  impluseJumpVel: 5
+  TimeToReachMaxHeight: 0.5
+  _movementTime: 1
   _MAX_WALKING_SPEED: 5
   _LOWEST_WALKING_SPEED: 0.3
   _MAX_SLOWWALKING_SPEED: 3
-  _LOWEST_SLOWWALKING_SPEED: 1.6
+  _LOWEST_SLOWWALKING_SPEED: 3
+  changeJumpHeightOnJump3: 1.2
   acclearation: 17
   playerGravity: 1
