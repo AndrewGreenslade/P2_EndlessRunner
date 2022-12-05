@@ -47,7 +47,6 @@ public class GameManager : MonoBehaviour
         instance.nextLevelButton.SetActive(false);
     }
 
-
     IEnumerator Post()//, string email, string phone)
     {
 
@@ -60,15 +59,11 @@ public class GameManager : MonoBehaviour
         WWW www = new WWW(url, rawData);
         yield return www;
     }
+
     public void Send()
     {
         StartCoroutine(Post());
     }
-
-
-
-
-
 
     // Update is called once per frame
     void Update()
@@ -80,10 +75,12 @@ public class GameManager : MonoBehaviour
                 instance.hScoreText.text = "High Score: " + instance.highScore;
                 instance.highScore = (int)instance.distanceScrpt.distanceTraveled;
             }
+
             if (instance.infection >= 100)
             {
                 instance.restartButton.SetActive(true);
             }
+
             if(instance.infection < 0)
             {
                 instance.infection = 0;
@@ -116,7 +113,6 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-
             if (Input.GetKey(KeyCode.L))
             {
                 if (targetTime <= 0.0f)
@@ -128,17 +124,11 @@ public class GameManager : MonoBehaviour
                     targetTime = 5.0f;
                 }
             }
-
-
-
-
-
         }
     }
 
     public void RestartGame()
     {
-        
         instance.hScoreText.text = "High Score: " + instance.highScore;
         instance.infection = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -157,6 +147,8 @@ public class GameManager : MonoBehaviour
             instance.infection = 0;
         }
         SceneManager.LoadScene("Level2");
+
+        FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
     }
 
     public void Level3()
@@ -170,6 +162,8 @@ public class GameManager : MonoBehaviour
             instance.infection = 0;
         }
         SceneManager.LoadScene("Level3");
+
+        FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
     }
 
 
@@ -181,8 +175,4 @@ public class GameManager : MonoBehaviour
         string uid = z1 + "/" + z2;
         return uid;
     }
-
-
-
-
 }

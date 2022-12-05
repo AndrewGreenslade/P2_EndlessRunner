@@ -85,7 +85,4 @@ public class PlayerController : MonoBehaviour
             m_cameraMain.GetComponent<CameraSystem2D>().AssignVignetteValue(GameManager.instance.infection);           
         }
     }
-
-
-
 }
