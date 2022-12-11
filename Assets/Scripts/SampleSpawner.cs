@@ -18,7 +18,7 @@ public class SampleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeSampleSpawn = Random.Range(2, 6);
+        timeSampleSpawn = Random.Range( 5, 10);
 
 
         //InvokeRepeating("spawnEnemy", 10, 10);

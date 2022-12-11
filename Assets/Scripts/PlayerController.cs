@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Sample")
         {
-            GameManager.instance.infection -= 5;
+            GameManager.instance.infection -= 3;
             Destroy(collision.gameObject);
         }
     }
