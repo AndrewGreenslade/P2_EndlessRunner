@@ -10,7 +10,9 @@ public class MapGen : MonoBehaviour
     
     public float SquareWidth = 1;
     public float speed = 2;
-    
+    private float speedIncreateTimer = 0;
+    public float speedIncreateTimeRate = 5.0f;
+
     Vector2 LowerLeftScreenPos;
     
     public int MaxTiles = 6; //max chunk height
@@ -28,14 +30,30 @@ public class MapGen : MonoBehaviour
             theChunk.GenerateChunk(4, sprite);
             chunks.Add(theChunk);
         }
-
-       // InvokeRepeating("removeRandomChunk", 5, 5);
     }
 
     // Update is called once per frame
     void Update()
     {
+        manageTimerAndIncreaseSpeed();
         CreateAndSpawnNewChunks();
+    }
+
+    private void manageTimerAndIncreaseSpeed()
+    {
+        speedIncreateTimer += Time.deltaTime;
+
+        if(FindObjectOfType<DistanceScript>().distanceTraveled >= 50.0f)
+        {
+            speed = 0;
+            return;
+        }
+
+        if (speedIncreateTimer >= speedIncreateTimeRate)
+        {
+            speed += 0.35f;
+            speedIncreateTimer = 0;
+        }
     }
 
     private void CreateAndSpawnNewChunks()
@@ -66,19 +84,6 @@ public class MapGen : MonoBehaviour
                 theChunk.GenerateChunk(NewHeight, sprite);
                 chunks.Add(theChunk);
             }
-        }
-    }
-
-    void removeRandomChunk()
-    {
-        int ChunkToRemove = Random.Range(chunks.Count - 5, chunks.Count -1);
-
-        if (chunks.Count >= ChunkToRemove)
-        {        
-            //destroy a random chunk between 10-15
-            GameObject toDestroy = chunks[ChunkToRemove].gameObject;
-            chunks.Remove(chunks[ChunkToRemove]);
-            Destroy(toDestroy);
         }
     }
 }

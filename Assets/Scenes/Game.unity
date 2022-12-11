@@ -443,6 +443,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2584d53d7507d714cb07a6681ff6cdc6, type: 3}
+--- !u!114 &1808542147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7325968627062871286, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
+  m_PrefabInstance: {fileID: 7325968627062871284}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d81588ee42d5a4ca258b1c4d1c8f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1983488527 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1983488527, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
@@ -533,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 7325968627209454876, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
       propertyPath: distanceScrpt
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1808542147}
     - target: {fileID: 7325968627209454877, guid: 94ff57a7d65b11640ae11439267556ef, type: 3}
       propertyPath: m_RootOrder
       value: 0
