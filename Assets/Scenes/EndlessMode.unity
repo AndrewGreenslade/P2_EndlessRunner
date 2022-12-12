@@ -760,6 +760,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3204417162342501377, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
+      propertyPath: _MAX_WALKING_SPEED
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204417162342501377, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
+      propertyPath: _MAX_SLOWWALKING_SPEED
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204417162342501377, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
+      propertyPath: _LOWEST_SLOWWALKING_SPEED
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867764960752995201, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3867764960752995203, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
       propertyPath: m_cameraMain
       value: 
