@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapGen : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class MapGen : MonoBehaviour
     {
         speedIncreateTimer += Time.deltaTime;
 
-        if(FindObjectOfType<DistanceScript>().distanceTraveled >= 50.0f)
+        if(FindObjectOfType<DistanceScript>().distanceTraveled >= 50.0f && SceneManager.GetActiveScene().name != "EndlessMode")
         {
             speed = 0;
             return;
