@@ -29,6 +29,19 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("EndlessMode");
         //FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
     }
+
+    public void Mainmenu()
+    {
+        SceneManager.LoadScene("Menu");
+        //FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
+    }
+
+    public void HelpMenu()
+    {
+        SceneManager.LoadScene("TutorialInfo");
+        //FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
+    }
+
     public void Exit()
     {
         Application.Quit();  

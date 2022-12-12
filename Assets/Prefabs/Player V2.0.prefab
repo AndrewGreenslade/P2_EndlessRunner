@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1007077794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007077795}
+  m_Layer: 0
+  m_Name: rayCast Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1007077795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007077794}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.69, y: -1.238, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3867764960752995229}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3204417160696955818
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3204417161581605103}
   m_Layer: 0
-  m_Name: raycast
+  m_Name: raycastRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3204417161581605100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.238, z: 0}
+  m_LocalPosition: {x: 0.81, y: -1.238, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,7 +201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &50287411603895832
 Transform:
   m_ObjectHideFlags: 0
@@ -204,6 +235,7 @@ GameObject:
   - component: {fileID: 3204417162342501407}
   - component: {fileID: 3204417162342501406}
   - component: {fileID: 3204417162342501377}
+  - component: {fileID: 270467142}
   m_Layer: 7
   m_Name: Player V2.0
   m_TagString: Player
@@ -226,6 +258,7 @@ Transform:
   - {fileID: 3204417161581605103}
   - {fileID: 3204417160696955819}
   - {fileID: 50287411603895832}
+  - {fileID: 1007077795}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -241,8 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7c7c291fbe84c44ada103707f6417e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 0}
-  gunParticle: {fileID: 0}
+  gun: {fileID: 3760733671606641875}
+  gunParticle: {fileID: 3334898708814401616, guid: 0501ef9ff9c2ee141b8d6dd53de0d371, type: 3}
   rb: {fileID: 3867764960752995201}
   infectionSpeedIncrease: 2
   tempValueInfection: 0
@@ -356,7 +389,8 @@ MonoBehaviour:
   _walkableSurfaceLayer:
     serializedVersion: 2
     m_Bits: 64
-  raycastTemp: {fileID: 3204417161581605100}
+  raycastRight: {fileID: 3204417161581605100}
+  raycastLeft: {fileID: 1007077794}
   leftKey: 97
   rightKey: 100
   jumpKey: 32
@@ -371,6 +405,20 @@ MonoBehaviour:
   raycastDistance: 0.02
   acclearation: 17
   playerGravity: 1
+--- !u!114 &270467142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867764960752995206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804ead3156d2417459b63a38239fa20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 0}
+  bullet: {fileID: 0}
 --- !u!1 &6569263584433607078
 GameObject:
   m_ObjectHideFlags: 0

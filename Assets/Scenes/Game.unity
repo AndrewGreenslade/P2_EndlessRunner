@@ -123,35 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &270467133 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3867764960752995206, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
-  m_PrefabInstance: {fileID: 3204417162235436892}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &270467142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270467133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 804ead3156d2417459b63a38239fa20a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gun: {fileID: 0}
-  bullet: {fileID: 0}
---- !u!4 &270467150 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3867764960752995229, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
-  m_PrefabInstance: {fileID: 3204417162235436892}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &369178814 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3204417161581605100, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
-  m_PrefabInstance: {fileID: 3204417162235436892}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &498998834
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,37 +213,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6941715806873127094, guid: 2584d53d7507d714cb07a6681ff6cdc6, type: 3}
   m_PrefabInstance: {fileID: 1544367689}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1007077794
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1007077795}
-  m_Layer: 0
-  m_Name: rayCast Left
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1007077795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007077794}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.69, y: -1.238, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 270467150}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1135541414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -454,26 +394,6 @@ PrefabInstance:
     - target: {fileID: 3204417160696955814, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3204417161581605100, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
-      propertyPath: m_Name
-      value: raycastRight
-      objectReference: {fileID: 0}
-    - target: {fileID: 3204417161581605103, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 3204417162342501377, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
-      propertyPath: raycastLeft
-      value: 
-      objectReference: {fileID: 1007077794}
-    - target: {fileID: 3204417162342501377, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
-      propertyPath: raycastRight
-      value: 
-      objectReference: {fileID: 369178814}
-    - target: {fileID: 3760733671606641875, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3867764960752995203, guid: 7aaaf2173730f0c45b16173637cec1b9, type: 3}
       propertyPath: m_cameraMain
