@@ -510,7 +510,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1983488528, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
       propertyPath: raycastDistance
-      value: 0.0275
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1861516974489347468, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
       propertyPath: m_RootOrder
