@@ -331,11 +331,11 @@
       "url": "https://packages.unity.com"
     },
     "ie.setu.movementcomponent": {
-      "version": "https://github.com/DavidJalisevs/RWM_P1_Part2_selfComponent.git?path=/RWM_P1_part2_selfComponent/Packages/ie.setu.movementcomponent#v1.1.8",
+      "version": "https://github.com/DavidJalisevs/RWM_P1_Part2_selfComponent.git?path=/RWM_P1_part2_selfComponent/Packages/ie.setu.movementcomponent#v1.2.1",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f23d56282d55a083d78cfaad77b4e14c5e8b5eb1"
+      "hash": "7b7911428665bf17210d69672433c1bfc0a7fb81"
     },
     "ie.setu.visualeffect": {
       "version": "https://github.com/AdamMcguigan/Visual-Effects-Package.git?path=/Packages/ie.setu.visualeffect#v0.2.2",
