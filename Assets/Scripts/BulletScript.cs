@@ -11,7 +11,7 @@ public class BulletScript : MonoBehaviour
     {
         Destroy(gameObject, 5);
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
