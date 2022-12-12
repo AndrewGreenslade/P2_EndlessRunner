@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 2698132178557220744}
   - component: {fileID: 2698132178557220748}
   m_Layer: 0
-  m_Name: Evil Snake
+  m_Name: Evil ShroomGuy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
