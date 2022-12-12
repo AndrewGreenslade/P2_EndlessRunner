@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //sprite = GetComponent<SpriteRenderer>();
 
-
         InvokeRepeating("IncreaseInfection", infectionSpeedIncrease, infectionSpeedIncrease);
 
         //m_cameraMain = Camera.main.GetComponent<CameraSystem2D>();
