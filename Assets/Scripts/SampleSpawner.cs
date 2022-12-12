@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SampleSpawner : MonoBehaviour
 {
@@ -18,17 +19,21 @@ public class SampleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeSampleSpawn = Random.Range( 5, 10);
-
-
-        //InvokeRepeating("spawnEnemy", 10, 10);
-        timeLeft -= Time.deltaTime;
-        if (timeLeft < 0)
+        if (FindObjectOfType<DistanceScript>().distanceTraveled < 50.0f && SceneManager.GetActiveScene().name != "EndlessMode")
         {
-            spawnSample();
-            timeLeft = timeSampleSpawn;
-        }
+            
 
+            timeSampleSpawn = Random.Range(5, 10);
+
+
+            //InvokeRepeating("spawnEnemy", 10, 10);
+            timeLeft -= Time.deltaTime;
+            if (timeLeft < 0)
+            {
+                spawnSample();
+                timeLeft = timeSampleSpawn;
+            }
+        }
     }
 
 

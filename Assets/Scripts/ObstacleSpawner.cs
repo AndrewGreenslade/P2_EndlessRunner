@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObstacleSpawner : MonoBehaviour
 {
@@ -25,18 +26,20 @@ public class ObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeObstacleSpawn = Random.Range(2, 6);
-        
-
-        //InvokeRepeating("spawnEnemy", 10, 10);
-        timeLeft -= Time.deltaTime;
-        if (timeLeft < 0)
+        if (FindObjectOfType<DistanceScript>().distanceTraveled < 50.0f || SceneManager.GetActiveScene().name == "EndlessMode")
         {
+            timeObstacleSpawn = Random.Range(2, 6);
 
-            spawnEnemy();
-            timeLeft = timeObstacleSpawn;
+
+            //InvokeRepeating("spawnEnemy", 10, 10);
+            timeLeft -= Time.deltaTime;
+            if (timeLeft < 0)
+            {
+
+                spawnEnemy();
+                timeLeft = timeObstacleSpawn;
+            }
         }
-        
     }
 
     private void FixedUpdate()

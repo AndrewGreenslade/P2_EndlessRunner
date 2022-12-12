@@ -8,6 +8,7 @@ public class BoundingBox : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            FindObjectOfType<GameManager>().infection += 5.0f;
             collision.gameObject.GetComponent<PlayerController>().resetPosition();
         }
     }

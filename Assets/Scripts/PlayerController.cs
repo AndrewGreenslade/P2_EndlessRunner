@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         Player = this.gameObject;
         gunScript = this.GetComponent<GunScript>();
         rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
+        //sprite = GetComponent<SpriteRenderer>();
 
 
         InvokeRepeating("IncreaseInfection", infectionSpeedIncrease, infectionSpeedIncrease);
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         }
         tempValueInfection = GameManager.instance.infection / 100;
 
-        sprite.color = new Color(1, 1 - tempValueInfection, 1 - tempValueInfection, 1);
+        //sprite.color = new Color(1, 1 - tempValueInfection, 1 - tempValueInfection, 1);
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {

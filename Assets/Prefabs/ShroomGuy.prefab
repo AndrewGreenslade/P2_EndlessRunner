@@ -121,6 +121,6 @@ MonoBehaviour:
   disableRenderingOnOverride: 1
   updateTiming: 1
   unscaledTime: 0
-  _animationName: Idle
+  _animationName: idleSquat
   loop: 1
   timeScale: 1

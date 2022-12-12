@@ -149,7 +149,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1861516974489347479}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 97a190ab57bf62e41a97ac4ad2822910, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -182,7 +182,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 97a190ab57bf62e41a97ac4ad2822910, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
   leftKey: 97
   rightKey: 100
   jumpKey: 32
-  impluseJumpVel: 6
+  impluseJumpVel: 5
   TimeToReachMaxHeight: 0.5
   _movementTime: 1
   _MAX_WALKING_SPEED: 5
@@ -261,7 +261,7 @@ MonoBehaviour:
   _MAX_SLOWWALKING_SPEED: 3
   _LOWEST_SLOWWALKING_SPEED: 3
   changeJumpHeightOnJump3: 1
-  raycastDistance: 0.014
+  raycastDistance: 0.02
   acclearation: 17
   playerGravity: 1
 --- !u!1 &2492711703233835032

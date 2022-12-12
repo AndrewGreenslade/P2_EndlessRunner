@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShroomGuy_Material_InsideMask
+  m_Name: ShroomLady_Material
   m_Shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1ffab4a23282461429988e76edc97826, type: 3}
+        m_Texture: {fileID: 2800000, guid: fcd9aef689959c346892281cf487355c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -32,8 +32,8 @@ Material:
     - _OutlineOpaqueAlpha: 1
     - _OutlineReferenceTexWidth: 1024
     - _OutlineSmoothness: 1
-    - _OutlineWidth: 2
-    - _StencilComp: 4
+    - _OutlineWidth: 3
+    - _StencilComp: 8
     - _StencilRef: 1
     - _StraightAlphaInput: 0
     - _ThresholdEnd: 0.25

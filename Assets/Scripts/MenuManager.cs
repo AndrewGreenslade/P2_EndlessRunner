@@ -20,14 +20,14 @@ public class MenuManager : MonoBehaviour
     public void StoryMode()
     {
         SceneManager.LoadScene("Game");
-        FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
+        //FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
     }
 
 
     public void EndlessMode()
     {
         SceneManager.LoadScene("EndlessMode");
-        FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
+        //FindObjectOfType<PlayerController>().m_cameraMain = Camera.main;
     }
     public void Exit()
     {
