@@ -497,6 +497,10 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 885590974}
+    - target: {fileID: 1861516974489347474, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: gunParticle
+      value: 
+      objectReference: {fileID: 3334898708814401616, guid: 0501ef9ff9c2ee141b8d6dd53de0d371, type: 3}
     - target: {fileID: 1861516974489347479, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
       propertyPath: m_Name
       value: Player

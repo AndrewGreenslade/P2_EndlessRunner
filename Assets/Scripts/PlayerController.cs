@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private GameObject Player;
     public GameObject gun;
+    public ParticleSystem gunParticle;
     private GunScript gunScript;
     public Rigidbody2D rb;
 
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
         gunScript = this.GetComponent<GunScript>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+
 
         InvokeRepeating("IncreaseInfection", infectionSpeedIncrease, infectionSpeedIncrease);
 
@@ -54,9 +56,10 @@ public class PlayerController : MonoBehaviour
 
         sprite.color = new Color(1, 1 - tempValueInfection, 1 - tempValueInfection, 1);
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-                gunScript.shootGun(true, new Vector3(gun.transform.position.x, gun.transform.position.y - 0.2f,gun.transform.position.z));
+            gunScript.shootGun(true, new Vector3(gun.transform.position.x, gun.transform.position.y - 0.2f,gun.transform.position.z));
+            Instantiate(gunParticle, gun.transform.position, Quaternion.identity);
         }
     }
 
