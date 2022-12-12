@@ -32,4 +32,16 @@ public class BulletScript : MonoBehaviour
             rb.velocity = new Vector3(-10, 0, 0);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 }

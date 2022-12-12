@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
-                gunScript.shootGun(true, gun.transform.position);
+                gunScript.shootGun(true, new Vector3(gun.transform.position.x, gun.transform.position.y - 0.2f,gun.transform.position.z));
         }
     }
 
