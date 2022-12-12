@@ -493,13 +493,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1861516974489347474, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 885590974}
     - target: {fileID: 1861516974489347479, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2199577493666486016, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4302595237986191137, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323769302274265247, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614118215093897835, guid: f9512371d2a045049839fe9b7a002a71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9512371d2a045049839fe9b7a002a71, type: 3}

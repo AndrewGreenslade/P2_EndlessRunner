@@ -6,11 +6,13 @@ public class GunScript : MonoBehaviour
 {
     public GameObject gun;
     public GameObject bullet;
+    private BulletScript bulletScript;
     // Start is called before the first frame update
     void Start()
     {
         //gun = GameObject.Find("Gun");
-        gun.SetActive(true);     
+        gun.SetActive(true);
+        bulletScript = GameObject.Find("Bullet").GetComponent<BulletScript>();
     }
 
     // Update is called once per frame
