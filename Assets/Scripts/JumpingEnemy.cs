@@ -11,6 +11,9 @@ public class JumpingEnemy : MonoBehaviour
     private int jumpPower;
 
     [SerializeField]
+    private int jumpCooldown;
+
+    [SerializeField]
     private bool isGrounded;
 
     [SerializeField]
@@ -25,7 +28,9 @@ public class JumpingEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        jumpPower = 100;
+        jumpPower = Random.Range(50,100);
+        jumpCooldown = Random.Range(3,5);
+
         StartCoroutine(Jumping());
     }
 
@@ -44,7 +49,7 @@ public class JumpingEnemy : MonoBehaviour
             {
                 rb2d.AddForce(new Vector2(0, jumpPower));
             }
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(jumpCooldown);
         }
     }
 
