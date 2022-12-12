@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     private GameObject Player;
+    public GameObject gun;
+    private GunScript gunScript;
     public Rigidbody2D rb;
 
     public float infectionSpeedIncrease = 2.0f;
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Player = this.gameObject;
+        gunScript = this.GetComponent<GunScript>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
@@ -51,7 +54,12 @@ public class PlayerController : MonoBehaviour
 
         sprite.color = new Color(1, 1 - tempValueInfection, 1 - tempValueInfection, 1);
 
+        if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("Bababooey");
 
+                gunScript.shootGun(true, new Vector3(0, 0, 0));
+        }
     }
 
 
