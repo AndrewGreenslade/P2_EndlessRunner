@@ -19,9 +19,6 @@ public class SampleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FindObjectOfType<DistanceScript>().distanceTraveled < 50.0f && SceneManager.GetActiveScene().name != "EndlessMode")
-        {
-            
 
             timeSampleSpawn = Random.Range(5, 10);
 
@@ -33,7 +30,6 @@ public class SampleSpawner : MonoBehaviour
                 spawnSample();
                 timeLeft = timeSampleSpawn;
             }
-        }
     }
 
 

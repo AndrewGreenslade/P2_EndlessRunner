@@ -13,7 +13,10 @@ public class DistanceScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceTraveled += Time.deltaTime;
+        if (GameManager.instance.infection < 100)
+        {
+            distanceTraveled += Time.deltaTime;
+        }
         int distanceTextDisplay = (int)distanceTraveled;
         distanceText.text = "Distance: " + distanceTextDisplay.ToString();
     }

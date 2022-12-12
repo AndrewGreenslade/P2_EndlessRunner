@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
         InvokeRepeating("IncreaseInfection", infectionSpeedIncrease, infectionSpeedIncrease);
 
-        //m_cameraMain = Camera.main.GetComponent<CameraSystem2D>();
+        m_cameraMain = Camera.main;
     }
 
 
